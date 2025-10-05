@@ -54,6 +54,12 @@ Open index.html in your browser
 open index.html
 
 ---
+## 🚀 Live Project
+
+Check out the live portfolio here:  
+[https://jayaramk-portfolio.netlify.app/](https://jayaramk-portfolio.netlify.app/)
+
+---
 
 ## 📬 Connect with Me
 
