@@ -789,3 +789,75 @@
             .typing-text { font-size: 1.5rem; }
             .section-title { font-size: 2.5rem; }
         }
+
+        .greeting-highlight {
+            color: #f5576c;
+            font-weight: 600;
+            animation: neon 2s infinite alternate;
+                }
+        @keyframes neon {
+            0% { text-shadow: 0 0 6px #f5576c, 0 0 8px #fee140; }
+            100% { text-shadow: 0 0 14px #f5576c, 0 0 22px #fee140; }
+        }
+        @keyframes wave {
+            0%, 60%, 100% { transform: rotate(0deg);}
+            10% { transform: rotate(22deg);}
+            20% { transform: rotate(-12deg);}
+            30% { transform: rotate(18deg);}
+            40% { transform: rotate(-8deg);}
+            50% { transform: rotate(18deg);}
+        }
+        @keyframes beat {
+            0% { transform: scale(1);}
+            100% { transform: scale(1.2);}
+        }
+        .social-links a {
+            transition: transform 0.3s;
+        }
+        .social-links a:hover {
+            transform: translateY(-8px) scale(1.17) rotate(-6deg);
+            box-shadow: 0 4px 18px rgba(236, 72, 153, 0.27);
+        }
+
+        .hero-thank {
+            margin: 36px auto 0 auto;
+            font-size: 1.24rem;
+            background: linear-gradient(90deg,#ec4899,#6366f1,#8b5cf6);
+            color: #fff;
+            border-radius: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 38px 14px 38px;
+            box-shadow: 0 4px 24px rgba(99,102,241,0.17);
+            font-weight: 600;
+            text-align: center;
+            max-width: 510px;
+        }
+        .future-highlight {
+            color: #fee140;
+            font-weight: 700;
+            display: block;
+            margin-top: 8px;
+            animation: neon 2s infinite alternate;
+        }
+        @keyframes neon {
+            0% { text-shadow: 0 0 8px #fee140, 0 0 12px #ec4899; }
+            100% { text-shadow: 0 0 18px #fee140, 0 0 24px #ec4899; }
+        }
+        @keyframes wave {
+            0%, 60%, 100% { transform: rotate(0deg);}
+            10% { transform: rotate(14deg);}
+            20% { transform: rotate(-10deg);}
+            30% { transform: rotate(18deg);}
+            40% { transform: rotate(-8deg);}
+            50% { transform: rotate(16deg);}
+        }
+        @media (max-width: 600px) {
+            .hero-thank {
+                font-size: 1.07rem;
+                padding: 11px 10px;
+                max-width: 95vw;
+            }
+        }
