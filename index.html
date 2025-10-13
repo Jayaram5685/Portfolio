@@ -7,513 +7,186 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
 
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Animated Background Particles -->
-    <div class="particles">
-        <div class="particle" style="width: 50px; height: 50px; background: rgba(99, 102, 241, 0.3); top: 10%; left: 10%; animation-delay: 0s;"></div>
-        <div class="particle" style="width: 30px; height: 30px; background: rgba(236, 72, 153, 0.3); top: 20%; left: 80%; animation-delay: 2s;"></div>
-        <div class="particle" style="width: 40px; height: 40px; background: rgba(16, 185, 129, 0.3); top: 60%; left: 15%; animation-delay: 4s;"></div>
-        <div class="particle" style="width: 60px; height: 60px; background: rgba(245, 158, 11, 0.3); top: 70%; left: 85%; animation-delay: 1s;"></div>
-    </div>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
 
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><i class="fas fa-code"></i> Jayaram</a>
+            <a class="navbar-brand" href="#">J.</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home"><i class="fas fa-home"></i> Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-user"></i> About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects"><i class="fas fa-rocket"></i> Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about"><span>01.</span> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience"><span>02.</span> Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects"><span>03.</span> Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><span>04.</span> Contact</a></li>
+                    <li class="nav-item"><a class="nav-link btn-resume" href="images/Resume.pdf" target="_blank">Resume</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-        <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12 hero-content" data-aos="fade-up">
-                    <h1>Hi, I'm <span class="highlight">Jayaram</span> 👋</h1>
-                    <div class="typing-container">
-                        <span class="typing-text"></span>
-                    </div>
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-7 hero-content" data-aos="fade-up">
+                    <h1 class="intro-text">Hello, my name is</h1>
+                    <h2 class="hero-name">Jayaram.</h2>
+                    <h3 class="hero-tagline" id="typing-animation"></h3>
                     <p class="hero-description">
-                        🎓 BTech 3rd Year CSE Student | 💼 Full Stack Developer Intern @ Unified Mentor<br>
-                        🚀 Python, Java, C | DSA Expert | Web Development (React, Node.js, MySQL)<br>
-                        🎖️ NCC Cadet | 🏆 IEEE Secretary | 📚 GATE CSE Aspirant | 💡 Problem Solver
+                        I'm a disciplined and passionate Full-Stack Developer specializing in engineering secure, scalable, and user-centric web applications. With a strong foundation in Data Structures & Algorithms, I transform complex problems into elegant digital solutions.
                     </p>
-                    <div class="hero-icons">
-                        <i class="fas fa-laptop-code"></i>
-                        <i class="fas fa-code-branch"></i>
-                        <i class="fas fa-database"></i>
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    
-                    <!-- Perfectly centered attractive block -->
-                    <div class="hero-thank" data-aos="zoom-in">
-                        <span class="wave-emoji" style="font-size:1.35em;display:inline-block;animation:wave 2s infinite;">🙏</span>
-                        Thank you for visiting my portfolio!
-                        <span class="future-highlight">Let's code the future together.</span>
-                        <span style="font-size:1.2em;">🚀</span>
-                    </div>
-
-                    <div style="margin-top: 30px;">
-                        <a href="#projects" class="btn btn-hero btn-primary-hero"><i class="fas fa-folder-open"></i> View Projects</a>
-                        <a href="#contact" class="btn btn-hero btn-outline-hero"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+                    <a href="#projects" class="btn btn-hero btn-primary-hero"><i class="fas fa-folder-open"></i> View My Work</a>
+                </div>
+                <div class="col-lg-5 text-center" data-aos="fade-left" data-aos-delay="200">
+                    <div class="hero-image-container">
+                        <img src="images/profile.jpg" alt="Jayaram" class="hero-image">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">
-                <span class="icon">👨‍💻</span>
-                <span>About</span> Me
-            </h2>
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <div class="about-content" data-aos="fade-up" data-aos-delay="100">
-                        <p>
-                            I'm a passionate and disciplined Computer Science student with strong hands-on experience in <strong>Full-Stack Development</strong> and <strong>Problem-Solving</strong>. My journey as an <strong>NCC Certified Cadet</strong> has shaped me with discipline, leadership, and teamwork, qualities that I now combine with my technical skills to build impactful solutions.
-                        </p>
-                        <p>
-                            <strong>💻 Technical Skills:</strong><br>
-                            <strong>Programming:</strong> Python, C, Java<br>
-                            <strong>DSA:</strong> Strong foundation in Data Structures & Algorithms<br>
-                            <strong>Web Development:</strong> HTML, CSS, Bootstrap, JavaScript, Flexbox<br>
-                            <strong>Database & Tools:</strong> SQL, Git, Linux
-                        </p>
-                        <p>
-                            <strong>🌟 Experience & Learnings:</strong><br>
-                            💼 <strong>Full-Stack Developer Intern @ Unified Mentor</strong> – working on impactful projects using Python, JavaScript, SQL<br>
-                            💼 <strong>Python Developer Intern @ Zaalima Development</strong> – built projects that enhanced my problem-solving and development expertise<br>
-                            💼 <strong>Teaching/Watching Assistant @ NxtWave</strong> – strengthened my technical communication and mentoring skills
-                        </p>
-                        <p>
-                            📌 Currently, I am also preparing for <strong>GATE (CSE)</strong> to strengthen my core fundamentals and achieve my dream of contributing to top organizations like TCS & PSUs. As the <strong>Secretary of IEEE Computer Society Student Branch</strong>, I actively organize technical events, collaborate with peers, and foster innovation.
-                        </p>
-                        <p>
-                            ✨ My goal is to combine <strong>technical expertise + creativity + disciplined mindset</strong> to solve real-world challenges through technology.
-                        </p>
-                        
-                        <div class="stats">
-                            <div class="stat-item">
-                                <i class="fas fa-code"></i>
-                                <h3>19+</h3>
-                                <p>GitHub Repos</p>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fas fa-laptop-code"></i>
-                                <h3>100+</h3>
-                                <p>DSA Problems</p>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fas fa-briefcase"></i>
-                                <h3>3+</h3>
-                                <p>Internships</p>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fas fa-certificate"></i>
-                                <h3>NCC</h3>
-                                <p>Certified Cadet</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <h2 class="section-title" data-aos="fade-up"><span>01.</span> About Me</h2>
+            <div class="about-content-box" data-aos="fade-up" data-aos-delay="100">
+                <p>
+                    I am a driven Computer Science student with hands-on internship experience in building real-world applications. My background as an <strong>NCC Certified Cadet</strong> has instilled in me a deep sense of discipline and teamwork, which I apply to every technical challenge I face.
+                </p>
+                <p>
+                    As the <strong>Secretary of the IEEE Computer Society Student Branch</strong>, I am actively involved in fostering a culture of innovation and learning among my peers. My current focus is on mastering full-stack technologies and preparing for <strong>GATE (CSE)</strong> to deepen my core engineering knowledge.
+                </p>
+                <p>Here are a few technologies I excel at:</p>
+                <ul class="tech-list">
+                    <li>JavaScript (ES6+)</li>
+                    <li>React.js</li>
+                    <li>Node.js & Express</li>
+                    <li>Python</li>
+                    <li>MongoDB & MySQL</li>
+                    <li>Docker</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
+    <section class="experience" id="experience">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">
-                <span class="icon">⚡</span>
-                My <span>Skills</span>
-            </h2>
-            <div class="skills-grid">
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fab fa-html5"></i>
-                    <h4>HTML5</h4>
-                    <p>Semantic markup, accessibility standards</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 90%"></div>
+            <h2 class="section-title" data-aos="fade-up"><span>02.</span> Where I've Worked</h2>
+            <div class="experience-timeline" data-aos="fade-up" data-aos-delay="100">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Full-Stack Developer Intern</h3>
+                        <span class="timeline-company">Unified Mentor</span>
+                        <p>Currently engineering end-to-end web applications using Python, JavaScript, and SQL. Responsible for developing and deploying full-stack projects, focusing on robust backend logic and dynamic user interfaces.</p>
                     </div>
                 </div>
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fab fa-css3-alt"></i>
-                    <h4>CSS3 & Bootstrap</h4>
-                    <p>Flexbox, Grid, Responsive Design</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 85%"></div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Python Developer Intern</h3>
+                        <span class="timeline-company">Zaalima Development</span>
+                        <p>Built and maintained Python-based applications, enhancing my problem-solving abilities and gaining practical experience in software development cycles and best practices.</p>
                     </div>
                 </div>
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fab fa-js"></i>
-                    <h4>JavaScript</h4>
-                    <p>ES6+, DOM manipulation, Async/Await</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
-                    <i class="fab fa-react"></i>
-                    <h4>React.js</h4>
-                    <p>Hooks, Context API, Component Design</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 75%"></div>
-                    </div>
-                </div>
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
-                    <i class="fab fa-node"></i>
-                    <h4>Node.js & Express</h4>
-                    <p>RESTful APIs, Authentication, Middleware</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 70%"></div>
-                    </div>
-                </div>
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
-                    <i class="fas fa-database"></i>
-                    <h4>MySQL</h4>
-                    <p>Database design, Queries, Relationships</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 75%"></div>
-                    </div>
-                </div>
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="700">
-                    <i class="fab fa-python"></i>
-                    <h4>Python</h4>
-                    <p>Django, Flask, Data Structures</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="800">
-                    <i class="fab fa-java"></i>
-                    <h4>Java</h4>
-                    <p>OOP, Collections, Exception Handling</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 75%"></div>
-                    </div>
-                </div>
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="900">
-                    <i class="fas fa-code"></i>
-                    <h4>C Programming</h4>
-                    <p>Memory Management, Pointers, Data Structures</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="1000">
-                    <i class="fab fa-git-alt"></i>
-                    <h4>Git & GitHub</h4>
-                    <p>Version Control, Collaboration, Branching</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="1100">
-                    <i class="fab fa-linux"></i>
-                    <h4>Linux</h4>
-                    <p>Command Line, Shell Scripting, System Admin</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 70%"></div>
-                    </div>
-                </div>
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="1200">
-                    <i class="fas fa-project-diagram"></i>
-                    <h4>DSA</h4>
-                    <p>Data Structures & Algorithms, Problem Solving</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 80%"></div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Teaching/Watching Assistant</h3>
+                        <span class="timeline-company">NxtWave</span>
+                        <p>Mentored peers and learners, strengthening my technical communication skills and deepening my own understanding of fundamental programming concepts.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- Projects section -->
-     <section class="projects" id="projects">
-  <div class="container">
-    <h2 class="section-title" data-aos="fade-up">
-      <span class="icon">🚀</span>
-      Featured <span>Projects</span>
-    </h2>
-    <div class="row">
-      <!-- RGM College Website -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="project-card">
-          <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <div class="project-content">
-            <h4>RGM College Website</h4>
-            <p>College portal website with comprehensive information, student resources, and interactive features for the college community.</p>
-            <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up"><span>03.</span> My Featured Projects</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-header"><i class="fas fa-folder-open"></i><div class="project-links"><a href="https://github.com/Jayaram5685/chatterbox-app" target="_blank" title="GitHub"><i class="fab fa-github"></i></a><a href="https://chatterbox-app-dusky.vercel.app/" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a></div></div>
+                        <h4>"ChatterBox" - WebSocket Platform</h4>
+                        <p>Engineered a real-time communication platform with a Node.js WebSocket server and a dynamic React UI. Features persistent messaging via MongoDB and live user presence.</p>
+                        <div class="project-tags"><span>React.js</span><span>Node.js</span><span>WebSockets</span><span>Socket.IO</span><span>MongoDB</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-header"><i class="fas fa-folder-open"></i><div class="project-links"><a href="https://github.com/Jayaram5685/task-manager-app" target="_blank" title="GitHub"><i class="fab fa-github"></i></a><a href="https://task-manager-app-zeta-eight.vercel.app/" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a></div></div>
+                        <h4>"TaskFlow" - MERN SaaS Platform</h4>
+                        <p>Engineered a full-stack, multi-tenant task platform. Features secure user authentication with JWT, a RESTful API, and a dynamic React UI. Deployed on Vercel & Render.</p>
+                        <div class="project-tags"><span>React.js</span><span>Node.js</span><span>REST API</span><span>MongoDB</span><span>JWT Auth</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card">
+                        <div class="project-header"><i class="fas fa-folder-open"></i><div class="project-links"><a href="https://github.com/Jayaram5685/RGM-Website" target="_blank" title="GitHub"><i class="fab fa-github"></i></a><a href="https://jai-rgm-portal.netlify.app/" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a></div></div>
+                        <h4>Responsive College Portal</h4>
+                        <p>Developed a fully responsive front-end for a college portal, focusing on user-centric design and a clean information architecture to serve students and faculty.</p>
+                        <div class="project-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+                    </div>
+                </div>
+                </div>
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="https://github.com/Jayaram5685?tab=repositories" target="_blank" class="btn btn-hero btn-primary-hero">View All Projects</a>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/Jayaram5685/RGM-Website" target="_blank"><i class="fab fa-github"></i> Code</a>
-              <a href="https://jai-rgm-portal.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-            </div>
-          </div>
         </div>
-      </div>
-      <!-- Todo Application -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-      <div class="project-card">
-        <div class="project-image" style="background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);">
-          <i class="fas fa-user-lock"></i>
-        </div>
-        <div class="project-content">
-          <h4>"TaskFlow" - MERN SaaS Platform</h4>
-          <p>Engineered a full-stack, multi-tenant task platform. Features secure user authentication with JWT, a RESTful API, and a dynamic React UI. Deployed on Vercel & Render.</p>
-          <div class="project-tags">
-            <span class="tag">React.js</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">REST API</span>
-            <span class="tag">MongoDB</span>
-            <span class="tag">JWT Auth</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Jayaram5685/task-manager-app" target="_blank"><i class="fab fa-github"></i> Code</a>
-            <a href="https://task-manager-app-zeta-eight.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-          </div>
-        </div>
-      </div>
-    </div>
-      <!-- Advanced Calculator -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="project-card">
-          <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-            <i class="fas fa-calculator"></i>
-          </div>
-          <div class="project-content">
-            <h4>Advanced Calculator</h4>
-            <p>Scientific calculator with advanced mathematical operations, memory functions, and user-friendly interface.</p>
-            <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Jayaram5685/advanced-calculator" target="_blank"><i class="fab fa-github"></i> Code</a>
-              <a href="https://jai-calculator.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Wikipedia Search App -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-        <div class="project-card">
-          <div class="project-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
-            <i class="fas fa-search"></i>
-          </div>
-          <div class="project-content">
-            <h4>Wikipedia Search App</h4>
-            <p>Interactive search application integrated with Wikipedia API for quick access to information with dynamic results.</p>
-            <div class="project-tags">
-              <span class="tag">JavaScript</span>
-              <span class="tag">API</span>
-              <span class="tag">Bootstrap</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Jayaram5685/wekipedia" target="_blank"><i class="fab fa-github"></i> Code</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Python Quiz Game -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-        <div class="project-card">
-          <div class="project-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
-            <i class="fas fa-gamepad"></i>
-          </div>
-          <div class="project-content">
-            <h4>Python Quiz Game</h4>
-            <p>Interactive quiz game built with Python featuring multiple choice questions, scoring system, and instant feedback.</p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Game</span>
-              <span class="tag">CLI</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Jayaram5685/python-quiz-game" target="_blank"><i class="fab fa-github"></i> Code</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Number Guessing Game -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-        <div class="project-card">
-          <div class="project-image" style="background: linear-gradient(135deg, #fcb045 0%, #fd1d1d 100%);">
-            <i class="fas fa-gamepad"></i>
-          </div>
-          <div class="project-content">
-            <h4>Number Guessing Game</h4>
-            <p>Interactive JavaScript game where users guess a randomly generated number.</p>
-            <div class="project-tags">
-              <span class="tag">JavaScript</span>
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Jayaram5685/Number_guessing_number" target="_blank"><i class="fab fa-github"></i> Code</a>
-              <a href="https://jai-gussing-a-number-game.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- ChatterBox project -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="project-card">
-          <div class="project-image" style="background: linear-gradient(135deg, #00B4DB 0%, #0083B0 100%);">
-            <i class="fas fa-satellite-dish"></i>
-          </div>
-          <div class="project-content">
-            <h4>"ChatterBox" - WebSocket Platform</h4>
-            <p>Engineered a real-time communication platform with a Node.js WebSocket server and a dynamic React UI. Features persistent messaging via MongoDB and live user presence tracking.</p>
-            <div class="project-tags">
-              <span class="tag">React.js</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">WebSockets</span>
-              <span class="tag">Socket.IO</span>
-              <span class="tag">MongoDB</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Jayaram5685/chatterbox-app" target="_blank"><i class="fab fa-github"></i> Code</a>
-              <a href="https://chatterbox-app-dusky.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Docker Learning Project -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="800">
-        <div class="project-card">
-          <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-            <i class="fab fa-docker"></i>
-          </div>
-          <div class="project-content">
-            <h4>Docker Learning Project</h4>
-            <p>Containerization project demonstrating Docker concepts, container management, and deployment practices.</p>
-            <div class="project-tags">
-              <span class="tag">Docker</span>
-              <span class="tag">DevOps</span>
-              <span class="tag">HTML</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Jayaram5685/docker-learning-project" target="_blank"><i class="fab fa-github"></i> Code</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Web Server Project -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="900">
-        <div class="project-card">
-          <div class="project-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
-            <i class="fas fa-server"></i>
-          </div>
-          <div class="project-content">
-            <h4>Web Server Project</h4>
-            <p>Implementation of web servers using Apache and Nginx with configuration and deployment demonstrations.</p>
-            <div class="project-tags">
-              <span class="tag">Apache</span>
-              <span class="tag">Nginx</span>
-              <span class="tag">HTML</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Jayaram5685/webserver" target="_blank"><i class="fab fa-github"></i> Code</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> <!-- closing .row -->
-  </div> <!-- closing .container -->
     </section>
 
-  
-
-    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">
-                <span class="icon">📧</span>
-                Get In <span>Touch</span>
-            </h2>
-            <div class="contact-grid">
-                <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fab fa-linkedin"></i>
-                    <h5>LinkedIn</h5>
-                    <a href="https://www.linkedin.com/in/jaya-ram-774646314" target="_blank">Connect with me</a>
-                </div>
-                <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fab fa-github"></i>
-                    <h5>GitHub</h5>
-                    <a href="https://github.com/Jayaram5685" target="_blank">View my code</a>
-                </div>
-                <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-code"></i>
-                    <h5>LeetCode</h5>
-                    <a href="https://leetcode.com/u/jayaram_5685/" target="_blank">See my solutions</a>
-                </div>
-                <div class="contact-card" data-aos="fade-up" data-aos-delay="400">
-                    <i class="fas fa-envelope"></i>
-                    <h5>Email</h5>
-                    <a href="mailto:jayaram@example.com">kuruvajayaram3@gmail.com</a>
+            <h2 class="section-title text-center" data-aos="fade-up"><span>04.</span> What's Next?</h2>
+            <div class="contact-content text-center" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="contact-title">Let's Build Together</h3>
+                <p class="contact-description">
+                    I am actively seeking new opportunities to contribute to exciting projects and am always open to new challenges. My inbox is always open—whether you have a question, a proposal, or just want to connect!
+                </p>
+                <div class="contact-grid">
+                    <a href="https://www.linkedin.com/in/jaya-ram-774646314" target="_blank" class="contact-card">
+                        <i class="fab fa-linkedin"></i>
+                        <h5>LinkedIn</h5>
+                        <span>Connect with me</span>
+                    </a>
+                    <a href="https://github.com/Jayaram5685" target="_blank" class="contact-card">
+                        <i class="fab fa-github"></i>
+                        <h5>GitHub</h5>
+                        <span>View my code</span>
+                    </a>
+                    <a href="https://leetcode.com/u/jayaram_5685/" target="_blank" class="contact-card">
+                        <i class="fas fa-code"></i>
+                        <h5>LeetCode</h5>
+                        <span>See my solutions</span>
+                    </a>
+                    <a href="mailto:kuruvajayaram3@gmail.com" class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h5>Email</h5>
+                        <span>Say Hello</span>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-    <div class="container">
-        <div class="social-links">
-            <a href="https://github.com/Jayaram5685" target="_blank" data-aos="zoom-in" data-aos-delay="100"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/jaya-ram-774646314" target="_blank" data-aos="zoom-in" data-aos-delay="200"><i class="fab fa-linkedin"></i></a>
-            <a href="https://leetcode.com/u/jayaram_5685/" target="_blank" data-aos="zoom-in" data-aos-delay="300"><i class="fas fa-code"></i></a>
+        <div class="container text-center">
+            <p>Designed & Built with <i class="fas fa-heart"></i> by Jayaram</p>
         </div>
+    </footer>
 
-        <div class="footer-greeting"
-             style="text-align: center; margin-bottom: 36px; font-size: 1.15rem; color: #10b981; font-weight: 500;"
-             data-aos="fade-up" data-aos-delay="400">
-            <span class="wave-emoji" style="font-size:1.3em; display:inline-block; animation:wave 2s infinite;">👋</span>
-            Thank you for exploring my journey.<br>
-            <span class="greeting-highlight">Every view inspires me to achieve more!</span>
-        </div>
-
-       
-        <p style="text-align: center; color: rgba(255,255,255,0.7); font-size: 1.1rem;" data-aos="fade-up" data-aos-delay="400">
-                Made with <i class="fas fa-heart" style="color: #e74c3c;"></i> by Jayaram | &copy; 2025 All Rights Reserved
-        </p>
-
-    </div>
-</footer>
-
-
-     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
     <script src="script.js"></script>
 </body>
 </html>

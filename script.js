@@ -1,76 +1,77 @@
-AOS.init({
-            duration: 1000,
-            once: true
+document.addEventListener("DOMContentLoaded", function() {
+    
+    // --- Custom Cursor ---
+    const cursor = document.getElementById('cursor');
+    const cursorBlur = document.getElementById('cursor-blur');
+    if (cursor && cursorBlur) {
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            cursorBlur.style.left = e.clientX + 'px';
+            cursorBlur.style.top = e.clientY + 'px';
         });
 
-        const roles = ['Full Stack Developer', 'React Developer', 'Node.js Developer', 'Problem Solver'];
-        let roleIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        const typingText = document.querySelector('.typing-text');
-
-        function type() {
-            const currentRole = roles[roleIndex];
-            
-            if (isDeleting) {
-                typingText.textContent = currentRole.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingText.textContent = currentRole.substring(0, charIndex + 1);
-                charIndex++;
-            }
-
-            let typeSpeed = isDeleting ? 50 : 100;
-
-            if (!isDeleting && charIndex === currentRole.length) {
-                isDeleting = true;
-                typeSpeed = 2000;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                roleIndex = (roleIndex + 1) % roles.length;
-                typeSpeed = 500;
-            }
-
-            setTimeout(type, typeSpeed);
-        }
-
-        type();
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
+        const hoverElements = document.querySelectorAll('a, button, .project-card, .contact-card, .hero-image-container');
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('grow'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('grow'));
         });
-
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
+    }
+    
+    // --- Navbar Scroll Effect ---
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
             }
         });
+    }
 
-        const progressBars = document.querySelectorAll('.progress-bar');
-        const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px 0px -100px 0px'
-        };
+    // --- Typing Animation ---
+    const typingElement = document.getElementById('typing-animation');
+    const roles = ["I build robust applications for the web.", "I am a Full-Stack Developer.", "I am a Lifelong Learner."];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
 
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const width = entry.target.style.width;
-                    entry.target.style.width = '0';
-                    setTimeout(() => {
-                        entry.target.style.width = width;
-                    }, 100);
-                }
-            });
-        }, observerOptions);
+    function type() {
+        if (!typingElement) return;
+        const currentRole = roles[roleIndex];
+        let text = '';
+        
+        if (isDeleting) {
+            text = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            text = currentRole.substring(0, charIndex + 1);
+            charIndex++;
+        }
 
-        progressBars.forEach(bar => observer.observe(bar));
+        typingElement.innerHTML = text;
+
+        let typeSpeed = isDeleting ? 75 : 150;
+
+        if (!isDeleting && charIndex === currentRole.length) {
+            typeSpeed = 2000;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            typeSpeed = 500;
+        }
+
+        setTimeout(type, typeSpeed);
+    }
+    
+    type();
+    
+    // --- Initialize AOS (Animate on Scroll) ---
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 50,
+    });
+});
