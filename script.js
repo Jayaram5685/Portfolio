@@ -74,4 +74,30 @@ document.addEventListener("DOMContentLoaded", function() {
         once: true,
         offset: 50,
     });
+
+    // ==================================
+    // === NEW NAVBAR FIX START ===
+    // ==================================
+    // This fixes the Unified Mentor request
+    const navLinks = document.querySelectorAll('.nav-item .nav-link');
+    const navCollapseEl = document.getElementById('navbarNav');
+
+    if (navLinks.length > 0 && navCollapseEl) {
+        // Get the bootstrap collapse instance
+        const bsCollapse = new bootstrap.Collapse(navCollapseEl, {
+            toggle: false // Prevent it from toggling on creation
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Check if the navbar is currently shown (mobile view)
+                if (navCollapseEl.classList.contains('show')) {
+                    bsCollapse.hide();
+                }
+            });
+        });
+    }
+    // ==================================
+    // === NEW NAVBAR FIX END ===
+    // ==================================
 });
