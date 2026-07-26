@@ -1,240 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jayaram - Full Stack Developer</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuruva Jayaram — Full-Stack Software Engineer</title>
+<meta name="description" content="Portfolio of Kuruva Jayaram, full-stack software engineer specializing in React, Node.js and MongoDB.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="cursor"></div>
-    <div id="cursor-blur"></div>
 
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">J.</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about"><span>01.</span> About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience"><span>02.</span> Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects"><span>03.</span> Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#faq"><span>04.</span> FAQs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact"><span>05.</span> Contact</a></li>
-                    <li class="nav-item"><a class="nav-link btn-resume" href="images/Resume.pdf" target="_blank">Resume</a></li>
-                </ul>
-            </div>
+<div id="cursorGlow"></div>
+<div class="bg-orb orb-a"></div>
+<div class="bg-orb orb-b"></div>
+<div class="bg-orb orb-c"></div>
+
+<div id="loader"><div class="loader-mark">KJ<span>.</span></div></div>
+
+<header class="nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-mark">KJ<span>.</span>dev</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#credentials">Credentials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="Jayaram_Resume.pdf" target="_blank" class="nav-cta">Resume ↗</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">SOFTWARE ENGINEER · FULL-STACK</div>
+      <h1 class="hero-name">Kuruva Jayaram</h1>
+      <h2 class="hero-role">I build <span id="typeTarget" class="type-target"></span><span class="cursor-blink">|</span></h2>
+      <p class="hero-desc">Final-year Computer Science engineer currently shipping production features as a Software Engineer Intern at <strong>ASHTek Minds</strong>, with a track record of 6+ full-stack applications built and deployed during a prior internship at Unified Mentor. AWS and MongoDB certified, with a foundation in data structures and systems that I keep sharp while preparing for GATE (CSE).</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary"><i class="fas fa-arrow-down"></i> View my work</a>
+        <a href="Jayaram_Resume.pdf" target="_blank" class="btn btn-ghost"><i class="fas fa-file-arrow-down"></i> Download résumé</a>
+      </div>
+
+      <div class="buildlog">
+        <div class="buildlog-head"><span class="lights"><span></span><span></span><span></span></span>&nbsp;status --engineer kuruva-jayaram</div>
+        <div class="buildlog-body">
+          <div class="buildlog-row"><span class="k">CGPA</span><span class="v"><span class="accent" data-count="8.77" data-decimals="2">0</span> / 10</span></div>
+          <div class="buildlog-row"><span class="k">SHIPPED</span><span class="v"><span class="accent" data-count="6">0</span>+ full-stack apps</span></div>
+          <div class="buildlog-row"><span class="k">CERTIFIED</span><span class="v">AWS · MongoDB</span></div>
+          <div class="buildlog-row"><span class="k">NOW BUILDING AT</span><span class="v">ASHTek Minds</span></div>
         </div>
-    </nav>
+      </div>
+    </div>
 
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="row align-items-center gy-5">
-                <div class="col-lg-7 hero-content" data-aos="fade-up">
-                    <h1 class="intro-text">Hello, my name is</h1>
-                    <h2 class="hero-name">Jayaram.</h2>
-                    <h3 class="hero-tagline" id="typing-animation"></h3>
-                    <p class="hero-description">
-                        I'm a disciplined and passionate Full-Stack Developer specializing in engineering secure, scalable, and user-centric web applications. With a strong foundation in Data Structures & Algorithms, I transform complex problems into elegant digital solutions.
-                    </p>
-                    <a href="#projects" class="btn btn-hero btn-primary-hero"><i class="fas fa-folder-open"></i> View My Work</a>
-                </div>
-                <div class="col-lg-5 text-center" data-aos="fade-left" data-aos-delay="200">
-                    <div class="hero-image-container">
-                        <img src="images/profile.jpg" alt="Jayaram" class="hero-image">
-                    </div>
-                </div>
-            </div>
+    <div class="hero-photo">
+      <div class="photo-ring"></div>
+      <div class="photo-frame" id="tiltPhoto">
+        <img src="profile.jpg" alt="Kuruva Jayaram">
+      </div>
+      <div class="photo-status"><span class="dot">●</span> Available for opportunities</div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">01 — ABOUT</div>
+      <h2 class="section-title">Discipline first, code second.</h2>
+    </div>
+    <div class="about-layout">
+      <div class="about-text reveal">
+        <p>I'm a final-year B.Tech Computer Science student building toward a career as a software engineer at a top-tier product company or a PSU. My path into engineering has been shaped as much by discipline as by curiosity — as an <strong>NCC 'A' Certificate Cadet</strong>, I learned to show up and finish what I start, and I bring that same rigor to every codebase.</p>
+        <p>As <strong>Secretary of the IEEE Computer Society Student Branch</strong> at RGMCET, I coordinated workshops and hackathons that grew student participation — leadership experience that keeps me thinking about the people using what I build, not just the code itself.</p>
+        <p>Right now I split my time between hands-on engineering work — currently at <strong>ASHTek Minds</strong> — and preparing for the <strong>GATE (CSE)</strong> exam, to make sure the fundamentals underneath my full-stack work stay strong.</p>
+      </div>
+      <div class="about-panel reveal">
+        <h4>QUICK FACTS</h4>
+        <div class="about-fact"><span class="label">Based in</span><span class="value">Hyderabad region, IN</span></div>
+        <div class="about-fact"><span class="label">Education</span><span class="value">B.Tech CSE, RGMCET</span></div>
+        <div class="about-fact"><span class="label">Graduating</span><span class="value">Apr 2027</span></div>
+        <div class="about-fact"><span class="label">Current role</span><span class="value">SE Intern, ASHTek Minds</span></div>
+        <div class="about-fact"><span class="label">Focus area</span><span class="value">React · Node.js · MongoDB</span></div>
+        <div class="about-fact"><span class="label">Studying for</span><span class="value">GATE (CSE)</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">02 — TOOLKIT</div>
+      <h2 class="section-title">What I build with.</h2>
+      <p class="section-sub">The stack I reach for most, grouped by where it sits in the system.</p>
+    </div>
+    <div class="skill-grid reveal">
+      <div class="skill-col">
+        <h5>LANGUAGES</h5>
+        <ul><li>Python</li><li>JavaScript (ES6+)</li><li>C</li></ul>
+      </div>
+      <div class="skill-col">
+        <h5>WEB & APIs</h5>
+        <ul><li>React.js</li><li>Node.js & Express</li><li>REST APIs</li><li>HTML / CSS / Bootstrap</li></ul>
+      </div>
+      <div class="skill-col">
+        <h5>DATA & TOOLING</h5>
+        <ul><li>MongoDB</li><li>SQL</li><li>Git & GitHub</li><li>Docker</li></ul>
+      </div>
+      <div class="skill-col">
+        <h5>CORE CS</h5>
+        <ul><li>Data Structures & Algorithms</li><li>OOP · DBMS</li><li>Operating Systems</li><li>Computer Networks</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">03 — EXPERIENCE</div>
+      <h2 class="section-title">Where I've worked.</h2>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl-item current">
+        <div class="tl-dot"></div>
+        <span class="tl-period">JUL 2026 — PRESENT<span class="tl-badge">CURRENT</span></span>
+        <h3 class="tl-role">Software Engineer Intern</h3>
+        <div class="tl-org">ASHTek Minds · Remote</div>
+        <p class="tl-desc">Building software engineering fundamentals in Python and Git/GitHub through hands-on, mentorship-driven projects, applying industry best practices from day one.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <span class="tl-period">JUN 2025 — NOV 2025</span>
+        <h3 class="tl-role">Full-Stack Developer Intern</h3>
+        <div class="tl-org">Unified Mentor Private Limited</div>
+        <p class="tl-desc">Built and deployed 6+ full-stack web applications using HTML, CSS, JavaScript, Bootstrap and Node.js; integrated REST APIs and managed MongoDB/SQLite databases.</p>
+        <p class="tl-note">Received a Letter of Recommendation for consistency, technical proficiency, and effective troubleshooting under deadlines.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <span class="tl-period">MAR 2025 — JUN 2025</span>
+        <h3 class="tl-role">Python Developer Intern</h3>
+        <div class="tl-org">Zaalima Development</div>
+        <p class="tl-desc">Developed and optimized Python applications with clean, scalable code; worked with APIs and data-handling libraries in a team environment.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <span class="tl-period">MAY 2025 — JAN 2026</span>
+        <h3 class="tl-role">Secretary, IEEE Computer Society Student Branch</h3>
+        <div class="tl-org">RGMCET</div>
+        <p class="tl-desc">Managed chapter activities and records; coordinated workshops, seminars and hackathons that increased student participation and engagement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">04 — PROJECTS</div>
+      <h2 class="section-title">Selected work.</h2>
+      <p class="section-sub">A few builds that show how I think about real-time systems, authentication, and clean UI.</p>
+    </div>
+    <div class="project-grid reveal">
+
+      <div class="project-card tilt-card">
+        <div class="project-top">
+          <span class="project-index">01 / Student MS</span>
+          <div class="project-links">
+            <a href="https://github.com/Jayaram5685/python-learning-day1" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
         </div>
-    </section>
+        <h4>Student Management System</h4>
+        <p>A modular, menu-driven console app for managing student records — add, search, update, delete and auto-grade students, with automatic JSON persistence and full input validation. Built during my Software Engineering internship at ASHTek Minds.</p>
+        <div class="project-tags"><span>Python</span><span>JSON Storage</span><span>Exception Handling</span><span>Modular Design</span></div>
+      </div>
 
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up"><span>01.</span> About Me</h2>
-            <div class="about-content-box" data-aos="fade-up" data-aos-delay="100">
-                <p>
-                    I am a driven Computer Science student with hands-on internship experience in building real-world applications. My background as an <strong>NCC Certified Cadet</strong> has instilled in me a deep sense of discipline and teamwork, which I apply to every technical challenge I face.
-                </p>
-                <p>
-                    As the <strong>Secretary of the IEEE Computer Society Student Branch</strong>, I am actively involved in fostering a culture of innovation and learning among my peers. My current focus is on mastering full-stack technologies and preparing for <strong>GATE (CSE)</strong> to deepen my core engineering knowledge.
-                </p>
-                <p>Here are a few technologies I excel at:</p>
-                <ul class="tech-list">
-                    <li>JavaScript (ES6+)</li>
-                    <li>React.js</li>
-                    <li>Node.js & Express</li>
-                    <li>Python</li>
-                    <li>MongoDB & MySQL</li>
-                    <li>Docker</li>
-                </ul>
-            </div>
+      <div class="project-card tilt-card">
+        <div class="project-top">
+          <span class="project-index">02 / TaskFlow</span>
+          <div class="project-links">
+            <a href="https://github.com/Jayaram5685/Smart-Task-Manager" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://smart-task-manager-dun-sigma.vercel.app/" target="_blank" title="Live demo"><i class="fas fa-arrow-up-right-from-square"></i></a>
+          </div>
         </div>
-    </section>
+        <h4>Multi-tenant MERN task platform</h4>
+        <p>A full-stack, multi-tenant task management SaaS with secure JWT authentication, a RESTful API, and a dynamic React UI. Deployed on Vercel & Render.</p>
+        <div class="project-tags"><span>React.js</span><span>Node.js</span><span>REST API</span><span>JWT Auth</span></div>
+      </div>
 
-    <section class="experience" id="experience">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up"><span>02.</span> Where I've Worked</h2>
-            <div class="experience-timeline" data-aos="fade-up" data-aos-delay="100">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Full-Stack Developer Intern</h3>
-                        <span class="timeline-company">Unified Mentor</span>
-                        <p>Currently engineering end-to-end web applications using Python, JavaScript, and SQL. Responsible for developing and deploying full-stack projects, focusing on robust backend logic and dynamic user interfaces.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Python Developer Intern</h3>
-                        <span class="timeline-company">Zaalima Development</span>
-                        <p>Built and maintained Python-based applications, enhancing my problem-solving abilities and gaining practical experience in software development cycles and best practices.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Teaching/Watching Assistant</h3>
-                        <span class="timeline-company">NxtWave</span>
-                        <p>Mentored peers and learners, strengthening my technical communication skills and deepening my own understanding of fundamental programming concepts.</p>
-                    </div>
-                </div>
-            </div>
+      <div class="project-card tilt-card">
+        <div class="project-top">
+          <span class="project-index">03 / RGM Portal</span>
+          <div class="project-links">
+            <a href="https://github.com/Jayaram5685/RGM-Website" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://jai-rgm-portal.netlify.app/" target="_blank" title="Live demo"><i class="fas fa-arrow-up-right-from-square"></i></a>
+          </div>
         </div>
-    </section>
+        <h4>Responsive college portal</h4>
+        <p>A fully responsive front-end for a college portal, built around clean information architecture to serve both students and faculty.</p>
+        <div class="project-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+      </div>
 
-    <section class="projects" id="projects">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up"><span>03.</span> My Featured Projects</h2>
-            <div class="row">
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-card">
-                        <div class="project-header"><i class="fas fa-folder-open"></i><div class="project-links"><a href="https://github.com/Jayaram5685/chatterbox-app" target="_blank" title="GitHub"><i class="fab fa-github"></i></a><a href="https://chatterbox-app-dusky.vercel.app/" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a></div></div>
-                        <h4>"ChatterBox" - WebSocket Platform</h4>
-                        <p>Engineered a real-time communication platform with a Node.js WebSocket server and a dynamic React UI. Features persistent messaging via MongoDB and live user presence.</p>
-                        <div class="project-tags"><span>React.js</span><span>Node.js</span><span>WebSockets</span><span>Socket.IO</span><span>MongoDB</span></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-card">
-                        <div class="project-header"><i class="fas fa-folder-open"></i><div class="project-links"><a href="https://github.com/Jayaram5685/task-manager-app" target="_blank" title="GitHub"><i class="fab fa-github"></i></a><a href="https://task-manager-app-zeta-eight.vercel.app/" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a></div></div>
-                        <h4>"TaskFlow" - MERN SaaS Platform</h4>
-                        <p>Engineered a full-stack, multi-tenant task platform. Features secure user authentication with JWT, a RESTful API, and a dynamic React UI. Deployed on Vercel & Render.</p>
-                        <div class="project-tags"><span>React.js</span><span>Node.js</span><span>REST API</span><span>MongoDB</span><span>JWT Auth</span></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-card">
-                        <div class="project-header"><i class="fas fa-folder-open"></i><div class="project-links"><a href="https://github.com/Jayaram5685/RGM-Website" target="_blank" title="GitHub"><i class="fab fa-github"></i></a><a href="https://jai-rgm-portal.netlify.app/" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a></div></div>
-                        <h4>Responsive College Portal</h4>
-                        <p>Developed a fully responsive front-end for a college portal, focusing on user-centric design and a clean information architecture to serve students and faculty.</p>
-                        <div class="project-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
-                    </div>
-                </div>
-                </div>
-            <div class="text-center mt-5" data-aos="fade-up">
-                <a href="https://github.com/Jayaram5685?tab=repositories" target="_blank" class="btn btn-hero btn-primary-hero">View All Projects</a>
-            </div>
+      <div class="project-card tilt-card">
+        <div class="project-top">
+          <span class="project-index">04 / Portfolio</span>
+          <div class="project-links">
+            <a href="https://github.com/Jayaram5685" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://jayaramk-portfolio.netlify.app/" target="_blank" title="Live demo"><i class="fas fa-arrow-up-right-from-square"></i></a>
+          </div>
         </div>
-    </section>
+        <h4>Personal portfolio website</h4>
+        <p>This site — designed and hand-built from scratch to present my engineering work, experience, and credentials in one place.</p>
+        <div class="project-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+      </div>
 
-    <section class="faq" id="faq">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up"><span>04.</span> FAQs</h2>
-            <div class="accordion" id="faqAccordion" data-aos="fade-up" data-aos-delay="100">
+    </div>
+    <div class="projects-cta reveal">
+      <a href="https://github.com/Jayaram5685?tab=repositories" target="_blank" class="btn btn-ghost">View all repositories <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
 
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            What services do you offer?
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            I specialize in full-stack development, building complete web applications from the database to the user interface. This includes creating RESTful APIs with Node.js and dynamic, responsive front-ends with React.js.
-                        </div>
-                    </div>
-                </div>
+<section id="credentials">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">05 — CREDENTIALS</div>
+      <h2 class="section-title">Certifications & standing.</h2>
+    </div>
+    <div class="cred-grid reveal">
+      <div class="cred-card"><i class="fab fa-aws"></i><h5>AWS Certified Cloud Practitioner</h5><span>Amazon Web Services</span></div>
+      <div class="cred-card"><i class="fas fa-leaf"></i><h5>MongoDB Associate Developer</h5><span>Dec 2025</span></div>
+      <div class="cred-card"><i class="fas fa-award"></i><h5>IEEE Volunteer Certificate</h5><span>IEEE Computer Society</span></div>
+      <div class="cred-card"><i class="fas fa-medal"></i><h5>NCC 'A' Certificate Cadet</h5><span>National Cadet Corps</span></div>
+    </div>
+  </div>
+</section>
 
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            What are your career goals?
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            My primary goal is to secure a challenging role in a top-tier tech company or a Public Sector Undertaking (PSU). I am currently preparing for the GATE (CSE) exam to build a strong foundation in core computer science subjects.
-                        </div>
-                    </div>
-                </div>
+<section class="contact alt" id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">06 — CONTACT</div>
+    </div>
+    <h3 class="contact-title reveal">Let's build something worth shipping.</h3>
+    <p class="contact-desc reveal">I'm actively looking for full-stack engineering roles and internships. If you have an opening, a project, or just want to talk shop — my inbox is open.</p>
+    <div class="contact-grid reveal">
+      <a href="mailto:kuruvajayaram3@gmail.com" class="contact-card"><i class="fas fa-envelope"></i><h5>Email</h5><span>kuruvajayaram3@gmail.com</span></a>
+      <a href="tel:+918498935608" class="contact-card"><i class="fas fa-phone"></i><h5>Phone</h5><span>+91 84989 35608</span></a>
+      <a href="https://www.linkedin.com/in/jaya-ram-774646314" target="_blank" class="contact-card"><i class="fab fa-linkedin"></i><h5>LinkedIn</h5><span>Connect</span></a>
+      <a href="https://github.com/Jayaram5685" target="_blank" class="contact-card"><i class="fab fa-github"></i><h5>GitHub</h5><span>View code</span></a>
+    </div>
+  </div>
+</section>
 
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Are you available for freelance projects?
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            While my main focus is on my studies and preparing for GATE, I am open to discussing interesting freelance or internship opportunities. Feel free to reach out via my contact page!
-                        </div>
-                    </div>
-                </div>
+<footer>
+  <div class="wrap">
+    <p>Designed & built by Kuruva Jayaram <i class="fas fa-heart"></i> © 2026</p>
+  </div>
+</footer>
 
-            </div>
-        </div>
-    </section>
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title text-center" data-aos="fade-up"><span>05.</span> What's Next?</h2>
-            <div class="contact-content text-center" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="contact-title">Let's Build Together</h3>
-                <p class="contact-description">
-                    I am actively seeking new opportunities to contribute to exciting projects and am always open to new challenges. My inbox is always open—whether you have a question, a proposal, or just want to connect!
-                </p>
-                <div class="contact-grid">
-                    <a href="https://www.linkedin.com/in/jaya-ram-774646314" target="_blank" class="contact-card">
-                        <i class="fab fa-linkedin"></i>
-                        <h5>LinkedIn</h5>
-                        <span>Connect with me</span>
-                    </a>
-                    <a href="https://github.com/Jayaram5685" target="_blank" class="contact-card">
-                        <i class="fab fa-github"></i>
-                        <h5>GitHub</h5>
-                        <span>View my code</span>
-                    </a>
-                    <a href="https://leetcode.com/u/jayaram_5685/" target="_blank" class="contact-card">
-                        <i class="fas fa-code"></i>
-                        <h5>LeetCode</h5>
-                        <span>See my solutions</span>
-                    </a>
-                    <a href="mailto:kuruvajayaram3@gmail.com" class="contact-card">
-                        <i class="fas fa-envelope"></i>
-                        <h5>Email</h5>
-                        <span>Say Hello</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container text-center">
-            <p>Designed & Built with <i class="fas fa-heart"></i> by Jayaram</p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
