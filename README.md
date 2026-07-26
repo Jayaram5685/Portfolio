@@ -57,15 +57,7 @@ This repo is the source for my personal portfolio site — built to give recruit
 
 ---
 
-## 🖼️ Screenshots
 
-| Home / Hero | Projects | Skills & Experience |
-|:---:|:---:|:---:|
-| ![Home](images/screenshot-home.png) | ![Projects](images/screenshot-projects.png) | ![Skills](images/screenshot-skills.png) |
-
-> 📸 Add your own screenshots to an `images/` folder in the repo and update the paths above — capture each section at 1280×800 for a consistent look in the table.
-
----
 
 ## 🧱 Tech Stack
 
@@ -125,7 +117,7 @@ Then open **`http://localhost:5500`** in your browser. 🎉
 <tr><td width="33%" valign="top">
 
 ### Netlify
-Drag the project folder onto [app.netlify.com/drop](https://app.netlify.com/drop) for an instant live URL.
+Drag the project folder onto [app.netlify.com/drop](https://jayaramk-portfolio.netlify.app/) for an instant live URL.
 
 </td><td width="33%" valign="top">
 
@@ -134,8 +126,7 @@ Push to a repo, then **Settings → Pages** → set source to your branch/root.
 
 </td><td width="33%" valign="top">
 
-### Vercel
-Import the repo at [vercel.com/new](https://vercel.com/new) — no build settings needed.
+
 
 </td></tr>
 </table>
